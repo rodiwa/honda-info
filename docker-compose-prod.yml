@@ -1,0 +1,10 @@
+version: "3"
+services:
+  view:
+    container_name: honda-info-prod
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+    image: rodiwa/honda-info-prod:1.0
+    ports:
+      - "80:80"
