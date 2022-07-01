@@ -1,16 +1,15 @@
 # Honda Info App
 Generic info about a certain Honda.
 
-## Dev Corner
-### Running locally
-- `docker-compose up -d`
-- Open `localhost:3000` in browser
-- `docker-compose down`
+## Quick Start - Dev Corner
+### Start dev server
+- `make start-dev`
 
-### Runnin on prod
-- `docker-compose -f docker-compose-prod.yml up -d`
-- Open `localhost` in browser
-- `docker-compose -f docker-compose-prod.yml down`
+### Stop dev server
+- `make stop-dev`
 
-### TODOs
-- `makefile` to make setup and use easier
+### Start prod server
+- `make start-prod`
+
+### Stop prod server
+- `make stop-prod`
