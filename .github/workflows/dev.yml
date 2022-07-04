@@ -20,12 +20,20 @@ jobs:
 
       - name: Install deps
         run: npm install
+      
+      - name: Run build
+        run: npm run build
 
       - name: Run unit tests
         run: npm run test
 
-      - name: Upload analysis results to GitHub
-        uses: github/codeql-action/upload-sarif@v2
+      - name: Deploy to dev s3 bucket
+        uses: shallwefootball/s3-upload-action@master
+        id: S3
         with:
-          sarif_file: eslint-results.sarif
-          wait-for-processing: true
+          aws_key_id: ${{ secrets.AWS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_bucket: ${{ secrets.AWS_BUCKET }}
+          source_dir: 'build'
+
+
