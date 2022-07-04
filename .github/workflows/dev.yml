@@ -27,6 +27,18 @@ jobs:
       - name: Run unit tests
         run: npm run test
 
+      - name: login to docker
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: build docker image
+        run: docker build -t rodiwa/honda-info:1.0 .
+
+      - name: push docker image to registry
+        run: docker push rodiwa/honda-info:${{ github.sha }}
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
