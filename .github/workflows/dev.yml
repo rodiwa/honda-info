@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: build docker image
-        run: docker build -t rodiwa/honda-info:1.0 .
+        run: docker build -t rodiwa/honda-info:${{ github.sha }} .
 
       - name: push docker image to registry
         run: docker push rodiwa/honda-info:${{ github.sha }}
