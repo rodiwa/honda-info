@@ -18,14 +18,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install deps
-        run: npm install
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
       
-      - name: Run build
-        run: npm run build
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        id: npm-cache-step
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package.json') }}
+
+      - if: ${{ steps.npm-cache-step.outputs.cache-hit != 'true' }}
+        name: Install dependencies
+        run: npm install
 
       - name: Run unit tests
         run: npm run test
+      
+      - name: Run build
+        run: npm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
