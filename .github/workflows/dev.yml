@@ -25,16 +25,28 @@ jobs:
           node-version: 18
           cache: npm
       
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        id: npm-cache-step
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - uses: actions/cache@v3
+        id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ hashFiles('**/package.json') }}
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      
+      # - name: Cache dependencies
+      #   uses: actions/cache@v3
+      #   id: npm-cache-step
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-build-${{ hashFiles('**/package.json') }}
 
-      - if: ${{ steps.npm-cache-step.outputs.cache-hit != 'true' }}
-        name: Install dependencies
-        run: npm install
+      # - if: ${{ steps.npm-cache-step.outputs.cache-hit != 'true' }}
+      #   name: Install dependencies
+      #   run: npm install
 
       - name: Run unit tests
         run: npm run test
