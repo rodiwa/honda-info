@@ -21,7 +21,7 @@ jobs:
       - name: Run code coverage
         run: CI=true npm run test -- --coverage
       - name: Upload code coverage
-        uses: actions/codecov@v3
+        uses: codecov/codecov-action@v3
         with:
           directory: /coverage
           fail_ci_if_error: true
