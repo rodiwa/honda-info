@@ -15,7 +15,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: node-modules-artifact
-          path: /node_modules
+          path: node_modules
       - name: Run unit tests
         run: npm run test
   unit-test:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: node-modules-artifact
-          path: /node_modules
+          path: node_modules
       - name: Run build
         run: npm run build
       
