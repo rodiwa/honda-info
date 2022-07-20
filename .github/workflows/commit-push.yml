@@ -21,7 +21,7 @@ jobs:
   build-project:
     name: build project
     runs-on: ubuntu-latest
-    needs: install-deps
+    # needs: install-deps
     permissions:
       contents: read
       security-events: write
