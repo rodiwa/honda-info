@@ -17,7 +17,16 @@ jobs:
       #     name: node-modules-artifact
       #     path: node_modules
       - name: Run unit tests
-        run: npm run test
+        run: CI=true npm run test
+      - name: Run code coverage
+        run: CI=true npm run test -- --coverage
+      - name: Upload code coverage
+        uses: actions/codecov@v3
+        with:
+          directory: /coverage
+          fail_ci_if_error: true
+          verbose: true
+      
   build-project:
     name: build project
     runs-on: ubuntu-latest
