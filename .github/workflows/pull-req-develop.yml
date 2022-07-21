@@ -12,6 +12,8 @@ jobs:
     name: sample-run
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - uses: ./.github/workflows/common-commit-tasks.yml
 
 
