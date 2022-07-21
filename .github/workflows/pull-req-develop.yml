@@ -1,0 +1,22 @@
+name: pull-request-develop-workflow
+
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "develop" ]
+
+jobs:
+  sample-run:
+    name: sample-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: echo "Sample run"
+
+
+
