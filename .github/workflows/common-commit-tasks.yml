@@ -1,6 +1,13 @@
-name: commit-push-workflow
+# runs unit tests and code coverage
+# can contain all other tasks to run on every code commit and push to branch
+name: common-commit-tasks
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
+  workflow_call:
+    
 
 jobs:
   unit-tests:
@@ -36,20 +43,20 @@ jobs:
         #   fail_ci_if_error: true
         #   verbose: true
 
-  build-project:
-    name: build-project
-    runs-on: ubuntu-latest
-    # needs: install-deps
-    permissions:
-      contents: read
-      security-events: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Install deps
-        run: npm install
-      - name: Run build
-        run: npm run build
+  # build-project:
+  #   name: build-project
+  #   runs-on: ubuntu-latest
+  #   # needs: install-deps
+  #   permissions:
+  #     contents: read
+  #     security-events: write
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
+  #     - name: Install deps
+  #       run: npm install
+  #     - name: Run build
+  #       run: npm run build
       
 
 
