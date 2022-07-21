@@ -18,6 +18,15 @@ jobs:
       #     path: node_modules
       - name: Run unit tests
         run: CI=true npm run test
+
+  code-coverage:
+    name: code-coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: npm install
       - name: Run code coverage
         run: CI=true npm run test -- --coverage
       - name: Upload code coverage
@@ -26,7 +35,7 @@ jobs:
         #   directory: /coverage
         #   fail_ci_if_error: true
         #   verbose: true
-      
+
   build-project:
     name: build project
     runs-on: ubuntu-latest
