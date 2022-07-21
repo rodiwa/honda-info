@@ -37,7 +37,7 @@ jobs:
         #   verbose: true
 
   build-project:
-    name: build project
+    name: build-project
     runs-on: ubuntu-latest
     # needs: install-deps
     permissions:
