@@ -1,16 +1,25 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+  Routes
+} from 'react-router-dom';
+
+import Images from './Images';
+import Home from './Home';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Deployed to S3!
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/images" element={<Images />} />
+      </Routes>
+    </Router>
   );
 }
 

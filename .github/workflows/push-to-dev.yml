@@ -2,10 +2,8 @@ name: development-workflow
 
 on:
   push:
-    branches: [ "develop" ]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [ "develop" ]
+    branches:
+      - develop
 
 jobs:
   eslint:
@@ -23,9 +21,6 @@ jobs:
       
       - name: Run build
         run: npm run build
-
-      - name: Run unit tests
-        run: npm run test
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
