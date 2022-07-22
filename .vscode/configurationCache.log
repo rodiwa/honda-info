@@ -1,0 +1,1 @@
+{"buildTargets":["check","do-build-dev","do-scan-image","info","install-deps","start-dev","start-prod","start-tests","stop-dev","stop-prod"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
