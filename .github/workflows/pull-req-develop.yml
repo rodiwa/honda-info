@@ -8,14 +8,39 @@ on:
     branches: 
       - develop
 
+# TODO: reusable wfs not working
 jobs:
-  sample-run:
-    name: sample-run
+  # FIXME:
+  # sample-run:
+  #   name: sample-run
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
+  #     - uses: ./.github/workflows/common-commit-tasks
+  unit-tests:
+    name: unit-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - uses: ./.github/workflows/common-commit-tasks
+      - name: Install deps
+        run: npm install
+      - name: Run unit tests
+        run: CI=true npm run test
+
+  code-coverage:
+    name: code-coverage
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install deps
+        run: npm install
+      - name: Run code coverage
+        run: CI=true npm run test -- --coverage
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v3
 
 
 
