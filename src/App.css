@@ -12,6 +12,14 @@
   width: 20%;
 }
 
+h1 {
+  text-align: center;
+}
+
+div.row {
+  margin-bottom: 2em;
+}
+
 .car-image-full {
   /* height: 100%; */
   width: 100%;
