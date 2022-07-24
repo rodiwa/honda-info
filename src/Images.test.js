@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Images from './Images';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Images/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders image section header', () => {
+  render(<Images />);
+  const imageHeader = screen.getByTestId('image-header');
+  expect(imageHeader).toBeInTheDocument();
+  expect(imageHeader).toHaveTextContent(/images/i);
 });
