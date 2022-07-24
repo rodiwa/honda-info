@@ -12,6 +12,8 @@ import Col from 'react-bootstrap/Col';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Button from 'react-bootstrap/Button';
 
+import { IMAGE_PAGE_SUBTEXT } from './data/messages';
+
 import T1 from './assets/images/t1.jpeg';
 import T2 from './assets/images/t2.jpeg';
 
@@ -19,9 +21,10 @@ import './App.css';
 
 function Images() {
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <h1>Images</h1>
+        <div className="text-center">{IMAGE_PAGE_SUBTEXT}</div>
       </Row>
       <Row>
         <Breadcrumb>
@@ -38,9 +41,9 @@ function Images() {
         <img src={T2} className="car-image-full" alt="logo" />
       </Row>
       <Row>
-        <Col>
-          <Button variant="primary" size="lg">
-            Go Back Home
+        <Col className="text-center">
+          <Button href="/" variant="primary" size="lg">
+            Go Back To Home Page
           </Button>
         </Col>
       </Row>
