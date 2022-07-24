@@ -8,11 +8,19 @@ import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import T1 from './assets/images/t1.jpeg';
-import T2 from './assets/images/t2.jpeg';
+import h1 from './assets/images/full/h1.jpg';
+import h2 from './assets/images/full/h2.jpg';
+import h3 from './assets/images/full/h3.jpg';
+import h4 from './assets/images/full/h4.jpg';
+import h5 from './assets/images/full/h5.jpg';
+import h6 from './assets/images/full/h6.jpg';
+import h7 from './assets/images/full/h7.jpg';
+import h8 from './assets/images/full/h8.jpg';
+import h9 from './assets/images/full/h9.jpg';
+import h10 from './assets/images/full/h10.jpg';
 
 import './App.css';
 
@@ -65,13 +73,13 @@ function Home() {
       </Row>
       <Row>
         <Col className="text-center">
-          <FontAwesomeIcon icon={faAt} />
-          &nbsp;
+          {/* <FontAwesomeIcon icon={faAt} />
+          &nbsp; */}
           { EMAIL }
         </Col>
         <Col className="text-center">
-          <FontAwesomeIcon icon={faPhone} />
-          &nbsp;
+          {/* <FontAwesomeIcon icon={faPhone} />
+          &nbsp; */}
           { PHONE }
         </Col>
       </Row>
@@ -81,12 +89,12 @@ function Home() {
       </Row>
       <Row>
         <Col className="text-center">
-          <NavLink to="/images"><img src={T1} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={T2} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={T1} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={T2} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={T1} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={T2} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h8} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h9} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h1} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h2} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h7} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h3} className="car-image-thumb" alt="logo" /></NavLink>
         </Col>
       </Row>
       <Row>
