@@ -5,6 +5,8 @@ export const SUMMARY_ITEMS_COL1 = [
   'Honda City, V, Diesel, Alloy Wheels, 8yr running, 2014 Model.',
   'DM (Whatsapp) me for price and other details, if interested.',
   'Car is maintained in excellent condition.',
+  'Car has never been in an accident.',
+  'Excellent bluetooth music system, with good base and subwoofers.',
   'Laminated floor, with transparent floor mats. For easy cleaning.',
   'Excellent mileage - 18-21km/L (City), 22-28km/L (Highways).',
   'Diesel engine - Good torque and pickup. More economical (more mileage, less diesel cost)'
@@ -42,6 +44,10 @@ export const FAQ_CONTENT_COL1 = [
   {
     ques: 'Any issues with the car?',
     ans: 'It"s very well maintained. You will see the condition is better than most 5+ yrs old cars.'
+  },
+  {
+    ques: 'Any accidents with the car?',
+    ans: 'Car has never been in an accident. Minor scratches only over the past 8 years.'
   },
   {
     ques: 'Can I get my mechanic to inspect the car?',
