@@ -14,13 +14,9 @@ import Alert from 'react-bootstrap/Alert';
 import h1 from './assets/images/full/h1.jpg';
 import h2 from './assets/images/full/h2.jpg';
 import h3 from './assets/images/full/h3.jpg';
-import h4 from './assets/images/full/h4.jpg';
-import h5 from './assets/images/full/h5.jpg';
-import h6 from './assets/images/full/h6.jpg';
 import h7 from './assets/images/full/h7.jpg';
 import h8 from './assets/images/full/h8.jpg';
 import h9 from './assets/images/full/h9.jpg';
-import h10 from './assets/images/full/h10.jpg';
 
 import './App.css';
 
@@ -45,7 +41,7 @@ function Home() {
   return (
     <Container fluid>
       <Row>
-        <h1>Summary</h1>
+        <h1 data-testid="summary-header">Summary</h1>
         <div className="text-center">{SUMMARY_TEXT}</div>
       </Row>
       <Row>
@@ -68,7 +64,7 @@ function Home() {
         </Col>
       </Row>
       <Row>
-        <h1>Contact</h1>
+        <h1 data-testid="contact-header">Contact</h1>
         <div className="text-center">{CONTACT_TEXT}</div>
       </Row>
       <Row>
@@ -84,7 +80,7 @@ function Home() {
         </Col>
       </Row>
       <Row>
-        <h1>Images</h1>
+        <h1 data-testid="images-header">Images</h1>
         <div className="text-center">{IMAGE_TEXT}</div>
       </Row>
       <Row>
@@ -98,7 +94,7 @@ function Home() {
         </Col>
       </Row>
       <Row>
-        <h1>FAQ</h1>
+        <h1 data-testid="faq-header">FAQ</h1>
         <div className="text-center">{FAQ_TEXT}</div>
       </Row>
       <Row>

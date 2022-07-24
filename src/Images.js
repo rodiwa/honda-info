@@ -31,7 +31,7 @@ function Images() {
   return (
     <Container fluid>
       <Row>
-        <h1>Images</h1>
+        <h1 data-testid="image-header">Images</h1>
         <div className="text-center">{IMAGE_PAGE_SUBTEXT}</div>
       </Row>
       <Row>

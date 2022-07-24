@@ -1,26 +1,38 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Images from './Images';
 
-test('renders summary section', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Summary/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders image section header', () => {
+  render(<Images />);
+  const imageHeader = screen.getByTestId('image-header');
+  expect(imageHeader).toBeInTheDocument();
+  expect(imageHeader).toHaveTextContent(/images/i);
 });
 
-test('renders images section', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Images/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// FIXME: run home tests instead
+// import { render, screen } from '@testing-library/react';
+// import Home from './Home';
 
-test('renders faq section', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Summary/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// test('renders summary section', () => {
+//   render(<Home />);
+//   const headerSection = screen.getByTestId('summary-header');
+//   expect(headerSection).toBeInTheDocument();
+//   expect(headerSection).toHaveTextContent(/summary/i);
+// });
 
-test('renders contact section', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Contact/i);
-  expect(linkElement).toBeInTheDocument();
-});
+// test('renders images section', () => {
+//   render(<Home />);
+//   const headerSection = screen.getByText(/Images/i);
+//   expect(headerSection).toBeInTheDocument();
+// });
+
+// test('renders faq section', () => {
+//   render(<Home />);
+//   const headerSection = screen.getByText(/Summary/i);
+//   expect(headerSection).toBeInTheDocument();
+// });
+
+// test('renders contact section', () => {
+//   render(<Home />);
+//   const headerSection = screen.getByText(/Contact/i);
+//   expect(headerSection).toBeInTheDocument();
+// });
