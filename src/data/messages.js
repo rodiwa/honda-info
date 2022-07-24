@@ -2,14 +2,12 @@
 
 // summary column1
 export const SUMMARY_ITEMS_COL1 = [
-  'Honda City, V, Diesel, Alloy Wheels, 2014 Model.',
+  'Honda City, V, Diesel, Alloy Wheels, 8yr running, 2014 Model.',
   'DM (Whatsapp) me for price and other details, if interested.',
   'Car is maintained in excellent condition.',
-  'Laminated floor, with transparent floor mats. So floor does not get wet in rainy seasons and can be cleaned easily.',
-  'Mileage of ~23km/L; City - 18-21km/L & Highways - 22-28km/L.',
-  '8th year running. 2014 registration.',
-  'Diesel engine - Good torque and pickup.',
-  'Diesel engine - More economical than petrol; Lower fuel costs; higher mileage.'
+  'Laminated floor, with transparent floor mats. For easy cleaning.',
+  'Excellent mileage - 18-21km/L (City), 22-28km/L (Highways).',
+  'Diesel engine - Good torque and pickup. More economical (more mileage, less diesel cost)'
 ];
 
 // summary column2
@@ -27,7 +25,7 @@ export const SUMMARY_ITEMS_COL2 = [
 // messages
 export const ALERT_TIP = 'Most relevant bills and service documents are available.';
 export const SUMMARY_TEXT = 'Quick overview of car';
-export const FAQ_TEXT = 'Some general questions and qnswers';
+export const FAQ_TEXT = 'Some general questions and answers';
 export const CONTACT_TEXT = 'Please read FAQ and Summary before asking questions';
 export const IMAGE_TEXT = 'Click on any one to view full size images';
 export const FOOTER_NOTE_1 = 'Looking to sell to serious buyers only.';

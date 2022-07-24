@@ -30,21 +30,21 @@ stop-prod:
 # docker related commands
 # TODO: pass dynamic version number
 do-build-dev:
-	docker build -t rodiwa/honda-info:1.1 .
+	docker build -t rodiwa/honda-info:1.2 .
 	@echo "create docker dev image SUCCESS"
 
 # docker scans images for vulnerabilities using snyk
 do-scan-image:
-	docker scan rodiwa/honda-info:1.1
+	docker scan rodiwa/honda-info:1.2
 
 # push docker image to repo
 do-image-push:
-	docker push rodiwa/honda-info:1.1
+	docker push rodiwa/honda-info:1.2
 
 # commit docker container
 # TODO: pass container ID, version
 do-container-commit:
-	docker container commit 09bcbcf33185 rodiwa/honda-info:1.1
+	docker container commit 09bcbcf33185 rodiwa/honda-info:1.2
 
 
 # info to show on screen

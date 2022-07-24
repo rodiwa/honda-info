@@ -42,7 +42,7 @@ function Home() {
       </Row>
       <Row>
         <Col xs={12} md>
-          <ListGroup>
+          <ListGroup className="summary-col1">
             { SUMMARY_ITEMS_COL1.map((item) => <ListGroup.Item><li>{ item }</li></ListGroup.Item>) }
           </ListGroup>
         </Col>

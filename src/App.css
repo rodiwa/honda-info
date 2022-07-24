@@ -25,6 +25,10 @@ div.row {
   width: 100%;
 }
 
+.summary-col1 {
+  margin-bottom: 1em;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
