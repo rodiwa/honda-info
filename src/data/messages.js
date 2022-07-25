@@ -2,11 +2,11 @@
 
 // summary column1
 export const SUMMARY_ITEMS_COL1 = [
-  'Honda City, V, Diesel, Alloy Wheels, 8yr running, 2014 Model.',
+  'Honda City, V, Diesel, Alloy wheels, 8yr running, 2014 model. MH-47 passing.',
   'Cruise control. Leather seats. Bluetooth music system. Touch A/C w Auto-mode',
   'Laminated floor, with transparent floor mats. For easy cleaning.',
   '"Winged" Honda grille installed. Default Honda grille is also available.',
-  'Mileage - 18-21km/L (City), 22-28km/L (Highways).',
+  'Kitna deti hai? 18-21km/L (City), 20-26km/L (Highways).',
   '120,000kms+ running; Mostly from Mumbai-Pune travel every month.',
   'Diesel engine gives good torque and pickup. More economical (more mileage, less diesel cost).'
 ];
