@@ -46,6 +46,25 @@ do-image-push:
 do-container-commit:
 	docker container commit 09bcbcf33185 rodiwa/honda-info:1.2
 
+# static files related
+# create static files
+run-build:
+	npm run build
+	@echo "Created build folder"
+
+# host static files in build folder
+host-build:
+	@echo "Hosting from build folder..."
+	npx http-server ./build
+
+# remove build folder
+remove-build:
+	rm -rf ./build/
+	@echo "Deleted ./build folder"
+
+# delete and recreate build folder
+clean-build:
+	make remove-build && make run-build
 
 # info to show on screen
 info:
@@ -66,4 +85,11 @@ info:
 	@echo "Scan docker image - 'make do-scan-image'"
 	@echo "Push docker image - 'make do-image-push'"
 	@echo "Commit docker container - 'make do-container-commit'"
+	@echo
+	@echo "Static files"
+	@echo "--------------"
+	@echo "Run build to generate static files" - 'make run-build'
+	@echo "Host build files" - 'make host-build'
+	@echo "Remove build folder" - 'make remove-build'
+	@echo "Clean build folder" - 'make clean-build'
 	@echo

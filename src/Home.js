@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Accordion from 'react-bootstrap/Accordion';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Alert from 'react-bootstrap/Alert';
+import Table from 'react-bootstrap/Table';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import h1 from './assets/images/full/h1.jpg';
 import h2 from './assets/images/full/h2.jpg';
@@ -28,10 +28,11 @@ import {
   FOOTER_NOTE_1,
   FOOTER_NOTE_2,
   FOOTER_NOTE_3,
-  SUMMARY_TEXT,
+  QUICK_SUMMARY_TEXT,
+  SERVICE_SUMMARY_TEXT,
   FAQ_TEXT,
   CONTACT_TEXT,
-  IMAGE_TEXT,
+  IMAGE_TEXT
 } from './data/messages';
 
 const EMAIL = process.env.REACT_APP_EMAIL;
@@ -41,26 +42,22 @@ function Home() {
   return (
     <Container fluid>
       <Row>
-        <h1 data-testid="summary-header">Summary</h1>
-        <div className="text-center">{SUMMARY_TEXT}</div>
+        <h1 data-testid="summary-header">Quick Summary</h1>
+        <div className="text-center">{QUICK_SUMMARY_TEXT}</div>
       </Row>
       <Row>
-        <Col xs={12} md>
-          <ListGroup className="summary-col1">
-            { SUMMARY_ITEMS_COL1.map((item) => <ListGroup.Item><li>{ item }</li></ListGroup.Item>) }
-          </ListGroup>
-        </Col>
-        <Col xs={12} md>
-          <ListGroup>
-            { SUMMARY_ITEMS_COL2.map((item) => <ListGroup.Item><li>{ item }</li></ListGroup.Item>) }
-          </ListGroup>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="text-center">
-          <Alert key="info" variant="info">
-            { ALERT_TIP }
-          </Alert>
+        <Col>
+          <Table bordered striped hover>
+            <tbody>
+              {
+                [...SUMMARY_ITEMS_COL1].map((item) => (
+                  <tr>
+                    <td>{ item }</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </Table>
         </Col>
       </Row>
       <Row>
@@ -69,14 +66,22 @@ function Home() {
       </Row>
       <Row>
         <Col className="text-center">
-          {/* <FontAwesomeIcon icon={faAt} />
-          &nbsp; */}
-          { EMAIL }
-        </Col>
-        <Col className="text-center">
-          {/* <FontAwesomeIcon icon={faPhone} />
-          &nbsp; */}
-          { PHONE }
+          <Table bordered>
+            <tbody>
+              <tr>
+                <td>
+                  <FontAwesomeIcon icon={faAt} />
+                  &nbsp;
+                  { EMAIL }
+                </td>
+                <td>
+                  <FontAwesomeIcon icon={faPhone} />
+                  &nbsp;
+                  { PHONE }
+                </td>
+              </tr>
+            </tbody>
+          </Table>
         </Col>
       </Row>
       <Row>
@@ -91,6 +96,29 @@ function Home() {
           <NavLink to="/images"><img src={h2} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h7} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h3} className="car-image-thumb" alt="logo" /></NavLink>
+        </Col>
+      </Row>
+      <Row>
+        <h1 data-testid="summary-header">Service Summary</h1>
+        <div className="text-center">{SERVICE_SUMMARY_TEXT}</div>
+      </Row>
+      <Row>
+        <Col>
+          <Table bordered striped hover>
+            <tbody>
+              {
+                [...SUMMARY_ITEMS_COL2].map((item) => (
+                  <tr>
+                    <td>{ item }</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </Table>
+          &nbsp;
+          <Alert key="info" variant="info">
+            { ALERT_TIP }
+          </Alert>
         </Col>
       </Row>
       <Row>

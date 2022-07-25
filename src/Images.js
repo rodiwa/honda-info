@@ -35,22 +35,16 @@ function Images() {
         <div className="text-center">{IMAGE_PAGE_SUBTEXT}</div>
       </Row>
       <Row>
-        <Breadcrumb>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>Images</Breadcrumb.Item>
-        </Breadcrumb>
-      </Row>
-      <Row>
         <Col>
-          <img src={h1} className="car-image-full" alt="logo" />
-          <img src={h2} className="car-image-full" alt="logo" />
-          <img src={h3} className="car-image-full" alt="logo" />
+          <img src={h9} className="car-image-full" alt="logo" />
+          <img src={h8} className="car-image-full" alt="logo" />
+          <img src={h7} className="car-image-full" alt="logo" />
           <img src={h4} className="car-image-full" alt="logo" />
+          <img src={h1} className="car-image-full" alt="logo" />
+          <img src={h3} className="car-image-full" alt="logo" />
+          <img src={h2} className="car-image-full" alt="logo" />
           <img src={h5} className="car-image-full" alt="logo" />
           <img src={h6} className="car-image-full" alt="logo" />
-          <img src={h7} className="car-image-full" alt="logo" />
-          <img src={h8} className="car-image-full" alt="logo" />
-          <img src={h9} className="car-image-full" alt="logo" />
           <img src={h10} className="car-image-full" alt="logo" />
         </Col>
       </Row>

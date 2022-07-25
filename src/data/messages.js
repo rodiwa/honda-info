@@ -3,32 +3,32 @@
 // summary column1
 export const SUMMARY_ITEMS_COL1 = [
   'Honda City, V, Diesel, Alloy Wheels, 8yr running, 2014 Model.',
-  'DM (Whatsapp) me for price and other details, if interested.',
-  'Car is maintained in excellent condition.',
-  'Car has never been in an accident.',
-  'Excellent bluetooth music system, with good base and subwoofers.',
+  'Cruise control.',
+  'Leather seats. Touch-panel A/C with Auto mode.',
+  'Bluetooth music system, with good base and subwoofers.',
   'Laminated floor, with transparent floor mats. For easy cleaning.',
-  'Excellent mileage - 18-21km/L (City), 22-28km/L (Highways).',
-  'Diesel engine - Good torque and pickup. More economical (more mileage, less diesel cost)'
+  '"Winged" Honda grille installed. Default Honda grille is also available.',
+  'Mileage - 18-21km/L (City), 22-28km/L (Highways).',
+  '120,000kms+ running; Mostly from Mumbai-Pune travel every month.',
+  'Diesel engine gives good torque and pickup. More economical (more mileage, less diesel cost).'
 ];
 
 // summary column2
 export const SUMMARY_ITEMS_COL2 = [
   'Car last serviced as recently as Aug 2022.',
+  'Car is maintained in excellent condition.',
+  'Car has never been in an accident.',
   'Timely service from authorised Honda service centers only',
-  'Leather seats. Touch-panel A/C with Auto mode',
-  '"Winged" Honda grille installed. Default Honda grille is also available.',
-  '120,000kms+ running; Mostly for Mumbai-Pune travel every month.',
-  'Battery in warranty. Replaced few months ago.',
-  'Wheel balanced + Aligned + Rotated recently.',
+  'Wheel balanced + aligned + rotated recently; Battery, wipers replaced recently.',
   'Zero-depp available till 10 years from most insurance companies.'
 ];
 
 // messages
 export const ALERT_TIP = 'Most relevant bills and service documents are available.';
-export const SUMMARY_TEXT = 'Quick overview of car';
+export const QUICK_SUMMARY_TEXT = 'DM (Whatsapp) me for price and other details, if interested.';
+export const SERVICE_SUMMARY_TEXT = 'Short summary of latest maintenance done on car.';
 export const FAQ_TEXT = 'Some general questions and answers';
-export const CONTACT_TEXT = 'Please read FAQ and Summary before asking questions';
+export const CONTACT_TEXT = 'Read FAQ and Summary to see if it answers some questions already.';
 export const IMAGE_TEXT = 'Click on any one to view full size images';
 export const FOOTER_NOTE_1 = 'Looking to sell to serious buyers only.';
 export const FOOTER_NOTE_2 = 'Brokers and agents, please stay away.';
