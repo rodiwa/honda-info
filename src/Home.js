@@ -11,12 +11,12 @@ import Table from 'react-bootstrap/Table';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import h1 from './assets/images/full/h1.jpg';
 import h2 from './assets/images/full/h2.jpg';
 import h3 from './assets/images/full/h3.jpg';
 import h7 from './assets/images/full/h7.jpg';
-import h8 from './assets/images/full/h8.jpg';
 import h9 from './assets/images/full/h9.jpg';
+import i2 from './assets/images/full/i2.jpg';
+import i3 from './assets/images/full/i3.jpg';
 
 import './App.css';
 
@@ -90,9 +90,9 @@ function Home() {
       </Row>
       <Row>
         <Col className="text-center">
-          <NavLink to="/images"><img src={h8} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={i3} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h9} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={h1} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={i2} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h2} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h7} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h3} className="car-image-thumb" alt="logo" /></NavLink>
