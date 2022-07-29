@@ -14,16 +14,17 @@ export const SUMMARY_ITEMS_COL1 = [
 
 // summary column2
 export const SUMMARY_ITEMS_COL2 = [
-  'Car last serviced as recently as Aug 2022.',
+  'Car last serviced on 29 July 2022.',
   'Car is maintained in excellent condition.',
   'Car has never been in an accident.',
-  'Timely service from authorised Honda service centers only',
+  'Timely service from authorised Honda service centers only.',
   'Wheel balanced + aligned + rotated recently; Battery, wipers replaced recently.',
   'Zero-depp available till 10 years from most insurance companies.'
 ];
 
 // messages
 export const ALERT_TIP = 'Most relevant bills and service documents are available.';
+export const FULL_SPEC_MSG = 'Or you can see the full spec here - ';
 export const QUICK_SUMMARY_TEXT = 'DM (Whatsapp) me for price and other details, if interested.';
 export const SERVICE_SUMMARY_TEXT = 'Short summary of latest maintenance done on car.';
 export const FAQ_TEXT = 'Some general questions and answers';

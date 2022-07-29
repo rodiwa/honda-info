@@ -11,12 +11,24 @@ import Table from 'react-bootstrap/Table';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import h2 from './assets/images/full/h2.jpg';
-import h3 from './assets/images/full/h3.jpg';
-import h7 from './assets/images/full/h7.jpg';
-import h9 from './assets/images/full/h9.jpg';
-import i2 from './assets/images/full/i2.jpg';
-import i3 from './assets/images/full/i3.jpg';
+import h1 from './assets/images/full/h1.webp';
+import h2 from './assets/images/full/h2.webp';
+import h3 from './assets/images/full/h3.webp';
+import h4 from './assets/images/full/h4.webp';
+import h5 from './assets/images/full/h5.webp';
+import h6 from './assets/images/full/h6.webp';
+import h7 from './assets/images/full/h7.webp';
+import h8 from './assets/images/full/h8.webp';
+import h9 from './assets/images/full/h9.webp';
+import h10 from './assets/images/full/h10.webp';
+import h11 from './assets/images/full/h11.webp';
+import h12 from './assets/images/full/h12.webp';
+import h13 from './assets/images/full/h13.webp';
+import h14 from './assets/images/full/h14.webp';
+import h15 from './assets/images/full/h15.webp';
+import h16 from './assets/images/full/h16.webp';
+import h17 from './assets/images/full/h17.webp';
+import h18 from './assets/images/full/h18.webp';
 
 import './App.css';
 
@@ -32,7 +44,8 @@ import {
   SERVICE_SUMMARY_TEXT,
   FAQ_TEXT,
   CONTACT_TEXT,
-  IMAGE_TEXT
+  IMAGE_TEXT,
+  FULL_SPEC_MSG
 } from './data/messages';
 
 const EMAIL = process.env.REACT_APP_EMAIL;
@@ -58,6 +71,16 @@ function Home() {
               }
             </tbody>
           </Table>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Alert key="info" variant="info">
+            <div className="text-center">
+              <a target="_blank" rel="noreferrer" href="https://www.carwale.com/honda-cars/city-2014-2017/v/">Click here</a>
+              &nbsp;to see the original full vehicle spec.
+            </div>
+          </Alert>
         </Col>
       </Row>
       <Row>
@@ -90,11 +113,11 @@ function Home() {
       </Row>
       <Row>
         <Col className="text-center">
-          <NavLink to="/images"><img src={i3} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={h9} className="car-image-thumb" alt="logo" /></NavLink>
-          <NavLink to="/images"><img src={i2} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h11} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h2} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h7} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h17} className="car-image-thumb" alt="logo" /></NavLink>
+          <NavLink to="/images"><img src={h13} className="car-image-thumb" alt="logo" /></NavLink>
           <NavLink to="/images"><img src={h3} className="car-image-thumb" alt="logo" /></NavLink>
         </Col>
       </Row>
@@ -116,9 +139,11 @@ function Home() {
             </tbody>
           </Table>
           &nbsp;
-          <Alert key="info" variant="info">
-            { ALERT_TIP }
-          </Alert>
+          <div className="text-center">
+            <Alert key="info" variant="info">
+              { ALERT_TIP }
+            </Alert>
+          </div>
         </Col>
       </Row>
       <Row>
