@@ -70,8 +70,7 @@ clean-build:
 # remove old s3 content + clean build + copy
 deploy-to-prod-hack:
 	make clean-build
-	export AWS_PROFILE=honda-info-prod-s3
-	aws s3 rm s3://buymyhonda.info/ --recursive
+	AWS_PROFILE=honda-info-prod-s3 && aws s3 rm s3://buymyhonda.info/ --recursive
 	aws s3 cp build/ s3://buymyhonda.info/ --recursive
 
 # info to show on screen
