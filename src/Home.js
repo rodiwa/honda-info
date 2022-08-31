@@ -44,8 +44,7 @@ import {
   SERVICE_SUMMARY_TEXT,
   FAQ_TEXT,
   CONTACT_TEXT,
-  IMAGE_TEXT,
-  FULL_SPEC_MSG
+  IMAGE_TEXT
 } from './data/messages';
 
 const EMAIL = process.env.REACT_APP_EMAIL;
@@ -57,6 +56,15 @@ function Home() {
       <Row>
         <h1 data-testid="summary-header">Quick Summary</h1>
         <div className="text-center">{QUICK_SUMMARY_TEXT}</div>
+      </Row>
+      <Row>
+        <Col>
+          <Alert key="danger" variant="danger">
+            <div className="text-center">
+              The car is no longer available! Thank you for your interest!
+            </div>
+          </Alert>
+        </Col>
       </Row>
       <Row>
         <Col>
