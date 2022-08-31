@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Fri Jul 29 20:50:27 2022
+# Make data base, printed on Wed Aug 31 08:53:10 2022
 
 # Variables
 
@@ -47,7 +44,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.f2eAxDMYXe/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.P7mSqfaWVe/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -137,7 +134,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 97913
+VSCODE_PID = 66603
 # variable set hash-table stats:
 # Load=62/1024=6%, Rehash=0, Collisions=1/85=1%
 
@@ -147,7 +144,7 @@ VSCODE_PID = 97913
 
 # Directories
 
-# . (device 16777232, inode 5697057): 23 files, no impossibilities.
+# . (device 16777231, inode 5697057): 23 files, no impossibilities.
 
 # 23 files, no impossibilities in 1 directories.
 
@@ -235,7 +232,7 @@ do-container-commit:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-25 23:30:34
+#  Last modified 2022-07-31 11:15:29
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -323,19 +320,20 @@ deploy-to-prod-hack:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
+make: *** No rule to make target `all'.  Stop.
+
 #  commands to execute (from `Makefile', line 72):
 	make clean-build
-	export AWS_PROFILE=honda-info-prod-s3
-	aws s3 rm s3://buymyhonda.info/ --recursive
+	AWS_PROFILE=honda-info-prod-s3 && aws s3 rm s3://buymyhonda.info/ --recursive
 	aws s3 cp build/ s3://buymyhonda.info/ --recursive
 	
 
 info:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 79):
+#  commands to execute (from `Makefile', line 78):
 	@echo
 	@echo "Make scripts you can use with this project"
 	@echo "-----------------------------------------"
@@ -376,6 +374,6 @@ info:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri Jul 29 20:50:27 2022
+# Finished Make data base on Wed Aug 31 08:53:10 2022
 
  

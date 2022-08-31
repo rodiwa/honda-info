@@ -5,6 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-prod
-    image: rodiwa/honda-info-prod:1.0
+    image: rodiwa/honda-info-prod:1.2
     ports:
       - "80:80"

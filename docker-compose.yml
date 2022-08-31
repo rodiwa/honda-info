@@ -3,7 +3,7 @@ services:
   view:
     container_name: honda-info
     build: .
-    image: rodiwa/honda-info:1.0
+    image: rodiwa/honda-info:1.2
     ports:
       - "3000:3000"
     volumes:
